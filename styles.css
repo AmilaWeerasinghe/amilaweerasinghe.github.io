@@ -123,7 +123,7 @@ body {
     transition: .5s ease;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
-    animation-delay: 1s;
+    animation-delay: calc(.2s * var(--i));
 }
 
 .social-media a:hover {
