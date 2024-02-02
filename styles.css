@@ -68,8 +68,8 @@ body {
     max-width: 450px;
     margin-right: -20px;
     opacity: 0;
-    animation: zoomIn 1s ease forwards;
-    animation-delay: 1s;
+    animation: zoomIn 1s ease forwards , floatImage 4s ease-in-out infinite;
+    animation-delay: 2s 3s;
 }
 
 .home-content {
@@ -208,5 +208,19 @@ body {
     100% {
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-24px);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }
