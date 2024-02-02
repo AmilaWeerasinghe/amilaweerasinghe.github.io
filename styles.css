@@ -67,6 +67,9 @@ body {
 .home-img img {
     max-width: 450px;
     margin-right: -20px;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1s;
 }
 
 .home-content {
@@ -78,7 +81,7 @@ body {
     font-weight: 700;
     opacity: 0;
     animation: slideBottom 1s ease forwards;
-    animation-delay: .7s;
+    animation-delay: 2s;
 }
 
 .home-content h3:nth-of-type(2){
@@ -143,6 +146,9 @@ body {
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
 }
 
 @keyframes slideRight {
@@ -189,6 +195,18 @@ body {
 
     100% {
         transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
         opacity: 1;
     }
 }
