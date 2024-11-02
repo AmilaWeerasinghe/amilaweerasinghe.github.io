@@ -1,4 +1,5 @@
 import React from 'react';
+import 'boxicons/css/boxicons.min.css';
 import './Home.css';
 
 const Home: React.FC = () => {
@@ -10,14 +11,20 @@ const Home: React.FC = () => {
         <h3>And I'm a <span className="multiple-text"></span></h3>
         <p>With a proven history of building amazing products</p>
         <div className="social-media">
-          <a href="https://www.linkedin.com/in/amila677/" style={{ '--i': 6 } as React.CSSProperties}><i className='bx bxl-linkedin'></i></a>
-          <a href="https://github.com/AmilaWeerasinghe" style={{ '--i': 7 } as React.CSSProperties}><i className='bx bxl-github'></i></a>
-          <a href="https://twitter.com/AmilaWeerasin11" style={{ '--i': 8 } as React.CSSProperties}><i className='bx bxl-twitter'></i></a>
+          <a href="https://www.linkedin.com/in/amila677/" style={{ '--i': 6 } as React.CSSProperties} target="_blank" rel="noopener noreferrer">
+            <i className='bx bxl-linkedin'></i>
+          </a>
+          <a href="https://github.com/AmilaWeerasinghe" style={{ '--i': 7 } as React.CSSProperties} target="_blank" rel="noopener noreferrer">
+            <i className='bx bxl-github'></i>
+          </a>
+          <a href="https://twitter.com/AmilaWeerasin11" style={{ '--i': 8 } as React.CSSProperties} target="_blank" rel="noopener noreferrer">
+            <i className='bx bxl-twitter'></i>
+          </a>
         </div>
         <a href="mailto:amilaweerasinghe677@gmail.com" className="btn">Let's talk</a>
       </div>
       <div className="home-img">
-        <img src="images/main.png" alt="home image" />
+        <img src={`${process.env.PUBLIC_URL}/images/main.png`} alt="home" />
       </div>
     </section>
   );
