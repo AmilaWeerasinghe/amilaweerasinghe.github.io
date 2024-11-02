@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/AmilaWeerasinghe.github.io/amilaweerasinghe.github.io/static/css/main.ad5b3b64.css",
+    "main.js": "/AmilaWeerasinghe.github.io/amilaweerasinghe.github.io/static/js/main.649791c5.js",
+    "static/media/boxicons.svg": "/AmilaWeerasinghe.github.io/amilaweerasinghe.github.io/static/media/boxicons.9e2b21b135bc7d4c803f.svg",
+    "static/media/boxicons.eot": "/AmilaWeerasinghe.github.io/amilaweerasinghe.github.io/static/media/boxicons.65a8ce52fc5427e8f94d.eot",
+    "static/media/boxicons.woff": "/AmilaWeerasinghe.github.io/amilaweerasinghe.github.io/static/media/boxicons.d12afc36557395143e4b.woff",
+    "static/media/boxicons.ttf": "/AmilaWeerasinghe.github.io/amilaweerasinghe.github.io/static/media/boxicons.db9ddb1898dbd76badca.ttf",
+    "static/media/boxicons.woff2": "/AmilaWeerasinghe.github.io/amilaweerasinghe.github.io/static/media/boxicons.df635aaf04cd75132f62.woff2",
+    "index.html": "/AmilaWeerasinghe.github.io/amilaweerasinghe.github.io/index.html",
+    "main.ad5b3b64.css.map": "/AmilaWeerasinghe.github.io/amilaweerasinghe.github.io/static/css/main.ad5b3b64.css.map",
+    "main.649791c5.js.map": "/AmilaWeerasinghe.github.io/amilaweerasinghe.github.io/static/js/main.649791c5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ad5b3b64.css",
+    "static/js/main.649791c5.js"
+  ]
+}
