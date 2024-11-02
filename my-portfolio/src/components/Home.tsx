@@ -1,6 +1,7 @@
 import React from 'react';
 import 'boxicons/css/boxicons.min.css';
 import './Home.css';
+import TypedText from './TypedText';
 
 const Home: React.FC = () => {
   return (
@@ -8,7 +9,7 @@ const Home: React.FC = () => {
       <div className="home-content">
         <h3>Hello, It's Me</h3>
         <h1>Amila Weerasinghe</h1>
-        <h3>And I'm a <span className="multiple-text"></span></h3>
+        <h3>And I'm a <TypedText /></h3>
         <p>With a proven history of building amazing products</p>
         <div className="social-media">
           <a href="https://www.linkedin.com/in/amila677/" style={{ '--i': 6 } as React.CSSProperties} target="_blank" rel="noopener noreferrer">
