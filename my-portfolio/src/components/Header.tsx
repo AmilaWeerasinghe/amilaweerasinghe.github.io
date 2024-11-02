@@ -1,17 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header className="header">
-      <a href="#" className="logo">Amila's Portfolio</a>
-      <nav className="navbar">
-        <a href="#" style={{ '--i': 1 } as React.CSSProperties} className="active">Home</a>
-        <a href="pages/about.html" style={{ '--i': 2 } as React.CSSProperties}>About</a>
-        <a href="pages/about.html" style={{ '--i': 3 } as React.CSSProperties}>Skills</a>
-        <a href="pages/about.html" style={{ '--i': 4 } as React.CSSProperties}>Portfolio</a>
-        <a href="pages/about.html" style={{ '--i': 5 } as React.CSSProperties}>Contact</a>
+      <Link to="/" className="logo">Amila's Portfolio</Link>
+      <nav className={`navbar ${isOpen ? 'open' : ''}`}>
+        <Link to="/" className="nav-link" onClick={toggleMenu}>Home</Link>
+        <Link to="/about" className="nav-link" onClick={toggleMenu}>About</Link>
+        <Link to="/skills" className="nav-link" onClick={toggleMenu}>Skills</Link>
+        <Link to="/portfolio" className="nav-link" onClick={toggleMenu}>Portfolio</Link>
+        <Link to="/contact" className="nav-link" onClick={toggleMenu}>Contact</Link>
       </nav>
+      <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </div>
     </header>
   );
 }
