@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.20d3399f.css",
-    "main.js": "/static/js/main.9ae9bc3a.js",
+    "main.css": "/static/css/main.ab2d8157.css",
+    "main.js": "/static/js/main.9ae0bfbb.js",
     "static/media/boxicons.svg": "/static/media/boxicons.9e2b21b135bc7d4c803f.svg",
     "static/media/boxicons.eot": "/static/media/boxicons.65a8ce52fc5427e8f94d.eot",
     "static/media/boxicons.woff": "/static/media/boxicons.d12afc36557395143e4b.woff",
     "static/media/boxicons.ttf": "/static/media/boxicons.db9ddb1898dbd76badca.ttf",
     "static/media/boxicons.woff2": "/static/media/boxicons.df635aaf04cd75132f62.woff2",
+    "static/media/react.svg": "/static/media/react.8e63d418a6421cc2662e234ac8af7313.svg",
+    "static/media/nodejs.svg": "/static/media/nodejs.6d0ce605479079334bce77dc7c3be9ab.svg",
+    "static/media/typescript.svg": "/static/media/typescript.1b46c028879d6c94a56e6dfc1fd6797b.svg",
     "index.html": "/index.html",
-    "main.20d3399f.css.map": "/static/css/main.20d3399f.css.map",
-    "main.9ae9bc3a.js.map": "/static/js/main.9ae9bc3a.js.map"
+    "static/media/mongodb.svg": "/static/media/mongodb.d930c2c4198d1000c2fb8b7d3177a44c.svg",
+    "main.ab2d8157.css.map": "/static/css/main.ab2d8157.css.map",
+    "main.9ae0bfbb.js.map": "/static/js/main.9ae0bfbb.js.map"
   },
   "entrypoints": [
-    "static/css/main.20d3399f.css",
-    "static/js/main.9ae9bc3a.js"
+    "static/css/main.ab2d8157.css",
+    "static/js/main.9ae0bfbb.js"
   ]
 }
