@@ -1,4 +1,4 @@
-# .github/workflows/deploy.yml
+// automate the process of building and deploying project to master branch
 name: Deploy to GitHub Pages
 
 on:
