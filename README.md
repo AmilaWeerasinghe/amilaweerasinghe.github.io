@@ -1,2 +1,1 @@
-The project is under migration to react
-Check for react-migration branch
+The site migrated to react in 2024 November.
