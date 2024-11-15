@@ -1,7 +1,7 @@
 import React from 'react';
 import 'boxicons/css/boxicons.min.css';
 import './Home.css';
-import TypedText from './TypedText';
+import TypedText from '../TypedTextComponent/TypedText';
 
 const Home: React.FC = () => {
   return (
