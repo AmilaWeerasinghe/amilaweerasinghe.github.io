@@ -7,17 +7,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* body {
-    background: #1f242d;
-    color: #fff;
-} */
-
-body.light {
+body.dark {
     background: #1f242d;
     color: #fff;
 }
 
-body.dark {
+body.light {
     background: #fff;
     color: #1f242d;
 }
