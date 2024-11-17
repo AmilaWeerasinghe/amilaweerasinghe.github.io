@@ -2,8 +2,19 @@ import React from 'react';
 import 'boxicons/css/boxicons.min.css';
 import './Home.css';
 import TypedText from '../TypedTextComponent/TypedText';
+import { Button } from '@mui/material';
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState, AppDispatch } from '../../store/store';
+import { toggleTheme } from '../../store/slices/themeSlice';
 
 const Home: React.FC = () => {
+  const theme = useSelector((state: RootState) => state.theme.theme);
+  const dispatch = useDispatch<AppDispatch>();
+  
+  const handleToggleTheme = () => {
+    dispatch(toggleTheme());
+  };
+
   return (
     <section className="home">
       <div className="home-content">
@@ -27,6 +38,9 @@ const Home: React.FC = () => {
       <div className="home-img">
         <img src={`${process.env.PUBLIC_URL}/images/main.png`} alt="home" />
       </div>
+      <Button variant="contained" color="primary" onClick={handleToggleTheme}>
+        Theme
+      </Button>
     </section>
   );
 }

@@ -7,9 +7,19 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
+/* body {
     background: #1f242d;
     color: #fff;
+} */
+
+body.light {
+    background: #1f242d;
+    color: #fff;
+}
+
+body.dark {
+    background: #fff;
+    color: #1f242d;
 }
 
 .header {

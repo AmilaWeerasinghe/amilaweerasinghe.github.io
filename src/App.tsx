@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Home from './components/HomePage/Home';
@@ -6,8 +6,16 @@ import SkillsComponent from './components/SkillsComponent/SkillsComponent';
 import Portfolio from './components/Portfolio';
 import './App.css';
 import './styles.css';
+import { useSelector } from 'react-redux';
+import { RootState } from './store/store';
 
 const App: React.FC = () => {
+  const theme = useSelector((state: RootState) => state.theme.theme);
+
+  useEffect(() => { 
+    document.body.className = theme;
+  }, [theme]);
+
   return (
     <Router>
       <Header />
