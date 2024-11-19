@@ -3,12 +3,11 @@ import 'boxicons/css/boxicons.min.css';
 import './Home.css';
 import TypedText from '../TypedTextComponent/TypedText';
 import { Button } from '@mui/material';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState, AppDispatch } from '../../store/store';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from '../../store/store';
 import { toggleTheme } from '../../store/slices/themeSlice';
 
 const Home: React.FC = () => {
-  const theme = useSelector((state: RootState) => state.theme.theme);
   const dispatch = useDispatch<AppDispatch>();
   
   const handleToggleTheme = () => {
