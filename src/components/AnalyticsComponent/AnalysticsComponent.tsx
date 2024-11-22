@@ -9,7 +9,7 @@ const VisitorAnalytics: React.FC = () => {
 
   useEffect(() => {
     // Connect to the local WebSocket server
-    const ws = new WebSocket('wss://https://rendernodeserver.onrender.com');
+    const ws = new WebSocket('wss://rendernodeserver.onrender.com');
 
     // Handle incoming messages
     ws.onmessage = (event) => {
