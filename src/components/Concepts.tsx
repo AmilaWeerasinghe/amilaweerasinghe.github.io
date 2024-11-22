@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { Card, CardContent, Typography, Grid, Button, Box } from '@mui/material';
 import { Memoization,
          Closure,
-         Hoisting } from './concepts/index';
+         Hoisting,
+         WebSockets } from './concepts/index';
 
 import { TimerUseRef } from './hooks/TimerUseRef';
 
 const concepts = [
   { title: 'Memoization', component: Memoization },
+  { title: 'Web sockets', component: WebSockets },
   { title: 'Closure', component: Closure },
   { title: 'Hoisting', component: Hoisting },
 ];
