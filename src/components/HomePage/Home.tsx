@@ -7,9 +7,12 @@ import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../store/store';
 import { toggleTheme } from '../../store/slices/themeSlice';
 import { MaterialUISwitch } from '../ToggleIcon/ToggleIcon';
+import { animated } from '@react-spring/web';
+import { useAnimationProps } from '../utils/animationUtils';
 
 const Home: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
+  const { toggleButtonProps } = useAnimationProps();
   
   const handleToggleTheme = () => {
     dispatch(toggleTheme());
@@ -33,8 +36,9 @@ const Home: React.FC = () => {
             <i className='bx bxl-twitter'></i>
           </a>
         </div>
-        <Box sx={{display: 'flex' , alignItems: 'center', gap: 2}}>
+        <Box sx={{display: 'flex' , alignItems: 'center', gap: 4}}>
         <a href="mailto:amilaweerasinghe677@gmail.com" className="btn">Let's talk</a>
+        <animated.div style={toggleButtonProps}>
         <FormGroup>
          <FormControlLabel
           control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
@@ -42,6 +46,7 @@ const Home: React.FC = () => {
           onChange={handleToggleTheme}
          />
         </FormGroup>
+        </animated.div>
       </Box>
       </div>
       <div className="home-img">

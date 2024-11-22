@@ -1,5 +1,4 @@
-/* General styles */
-.header {
+.header.dark {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,10 +10,30 @@
     align-items: center;
     z-index: 100;
   }
+
+  .header.light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
   
-  .logo {
+  .logo.dark {
     font-size: 25px;
     color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .logo.light {
+    font-size: 25px;
+    color: #1f242d;
     text-decoration: none;
     font-weight: 600;
   }
@@ -24,9 +43,17 @@
     gap: 20px;
   }
   
-  .nav-link {
+  .nav-link.dark {
     font-size: 18px;
     color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .nav-link.light {
+    font-size: 18px;
+    color: #1f242d;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;

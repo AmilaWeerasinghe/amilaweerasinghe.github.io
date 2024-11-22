@@ -15,6 +15,17 @@ const useAnimationProps = () => {
     config: { tension: 100, friction: 40 },
   });
 
+  const toggleButtonProps = useSpring({
+    from: { transform: 'translateY(100%) scale(1)', opacity: 0 },
+    to: async (next) => {
+      while (true) {
+        await next({ transform: 'translateY(0%) scale(1.2)', opacity: 1 });
+        await next({ transform: 'translateY(0%) scale(1)' });
+      }
+    },
+    config: { tension: 50, friction: 40 },
+  })
+
   const logoAnimationProps = useSpring({
     from: { transform: 'rotate(0deg) scale(1)' },
     to: async (next) => {
@@ -26,7 +37,7 @@ const useAnimationProps = () => {
     config: { tension: 50, friction: 40 },
   });
 
-  return { topSkillsProps, bottomSkillsProps, logoAnimationProps };
+  return { topSkillsProps, bottomSkillsProps, logoAnimationProps, toggleButtonProps };
 };
 
 export { useAnimationProps };
