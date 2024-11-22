@@ -2,10 +2,11 @@ import React from 'react';
 import 'boxicons/css/boxicons.min.css';
 import './Home.css';
 import TypedText from '../TypedTextComponent/TypedText';
-import { Button } from '@mui/material';
+import { FormGroup, FormControlLabel, Box } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../store/store';
 import { toggleTheme } from '../../store/slices/themeSlice';
+import { MaterialUISwitch } from '../ToggleIcon/ToggleIcon';
 
 const Home: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -32,14 +33,20 @@ const Home: React.FC = () => {
             <i className='bx bxl-twitter'></i>
           </a>
         </div>
+        <Box sx={{display: 'flex' , alignItems: 'center', gap: 2}}>
         <a href="mailto:amilaweerasinghe677@gmail.com" className="btn">Let's talk</a>
+        <FormGroup>
+         <FormControlLabel
+          control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
+          label="Toggle Theme"
+          onChange={handleToggleTheme}
+         />
+        </FormGroup>
+      </Box>
       </div>
       <div className="home-img">
         <img src={`${process.env.PUBLIC_URL}/images/main.png`} alt="home" />
       </div>
-      <Button variant="contained" color="primary" onClick={handleToggleTheme}>
-        Theme
-      </Button>
     </section>
   );
 }
