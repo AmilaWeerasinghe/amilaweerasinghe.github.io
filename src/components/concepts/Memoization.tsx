@@ -17,11 +17,17 @@ const memoize = ( fn : Function) => {
     }
 }
 
-const fibonacci = ( number: number): number => {
+const fibonacci = ( number: number, cache: { [key: number]: number} ={} ): number => {
     if(number <= 1) {
         return number;
     }
-    return fibonacci(number - 1) + fibonacci(number -2);
+    if( number in cache) {
+        console.log('fib got cache number', number);
+        return cache[number]
+    }
+    const result = fibonacci(number - 1, cache) + fibonacci(number -2, cache);
+    cache[number] = result;
+    return result;
 }
 
 // memoized for fibonnaci is created only once
@@ -37,6 +43,7 @@ export const Memoization: React.FC = () => {
         } else {
             setResult(memoizedFibonacci(number));
             console.log(`fibonacci for ${number}`, memoizedFibonacci(number));
+            //second log will not be called as it is memoized
             console.log(`fibonacci for ${number}`, memoizedFibonacci(number));
         }
     }
@@ -44,6 +51,10 @@ export const Memoization: React.FC = () => {
     <Box sx={{p: 10}}>
         <Typography>Memoization fibonnaci</Typography>
         <TextField 
+        sx={{ 
+            '& .MuiInputBase-input': {
+              color: 'white', // Text color
+           },}}
         type="number"
         value={number} 
         onChange={
