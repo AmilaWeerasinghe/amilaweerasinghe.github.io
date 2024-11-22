@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Home from './components/HomePage/Home';
 import SkillsComponent from './components/SkillsComponent/SkillsComponent';
-import Portfolio from './components/Portfolio';
+import Concepts from './components/Concepts';
 import './App.css';
 import './styles.css';
 import { useSelector } from 'react-redux';
@@ -22,7 +22,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/skills" element={<SkillsComponent />} />
-        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/concepts" element={<Concepts />} />
       </Routes>
     </Router>
   );
