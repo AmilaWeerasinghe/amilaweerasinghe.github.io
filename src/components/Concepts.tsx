@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
 import { Card, CardContent, Typography, Grid, Button, Box } from '@mui/material';
-import { Memoization } from './concepts/Memoization';
-import { Closure } from './concepts/Closure';
-import { Hoisting } from './concepts/Hoisting';
+import { Memoization,
+         Closure,
+         Hoisting } from './concepts/index';
+
+import { TimerUseRef } from './hooks/TimerUseRef';
 
 const concepts = [
   { title: 'Memoization', component: Memoization },
   { title: 'Closure', component: Closure },
   { title: 'Hoisting', component: Hoisting },
 ];
+
+const Hooks = [
+  { title: 'useRef Hook' , component : TimerUseRef }
+]
 
 const Concepts: React.FC = () => {
   const [selectedConcept, setSelectedConcept] = useState<React.FC | null>(null);
@@ -28,17 +34,30 @@ const Concepts: React.FC = () => {
           {React.createElement(selectedConcept)}
         </div>
       ) : (
+        <Box>
         <Grid container spacing={3} sx={{padding: 10}}>
           {concepts.map((concept) => (
             <Grid item xs={12} sm={6} md={4} key={concept.title}>
               <Card onClick={() => handleCardClick(concept.component)}>
-                <CardContent>
+                <CardContent sx={{ display: 'flex' , alignItems: 'center' , justifyContent: 'center'}}>
                   <Typography variant="h5">{concept.title}</Typography>
                 </CardContent>
               </Card>
             </Grid>
           ))}
         </Grid>
+        <Grid container spacing={3} sx={{padding:10}}>
+          {Hooks.map((hook) => (
+            <Grid item key={hook.title}>
+              <Card onClick={() => handleCardClick(hook.component)}>
+                <CardContent >
+                  <Typography variant='h5'>{hook.title}</Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+        </Box>
       )}
       <Box sx={{pt: 4, pl: 10, display: 'flex'}}>
       <Button variant="contained" color="primary" onClick={handleBackClick}>
