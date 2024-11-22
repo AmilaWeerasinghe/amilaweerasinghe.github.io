@@ -8,6 +8,7 @@ import './App.css';
 import './styles.css';
 import { useSelector } from 'react-redux';
 import { RootState } from './store/store';
+import { Footer } from './components/Footer/Footer';
 
 const App: React.FC = () => {
   const theme = useSelector((state: RootState) => state.theme.theme);
@@ -24,6 +25,7 @@ const App: React.FC = () => {
         <Route path="/skills" element={<SkillsComponent />} />
         <Route path="/concepts" element={<Concepts />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

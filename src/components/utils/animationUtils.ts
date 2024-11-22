@@ -37,7 +37,18 @@ const useAnimationProps = () => {
     config: { tension: 50, friction: 40 },
   });
 
-  return { topSkillsProps, bottomSkillsProps, logoAnimationProps, toggleButtonProps };
+  const visitorsAnimationProps = useSpring({
+    from: { opacity: 1 },
+    to: async (next) => {
+      while (true) {
+        await next({ opacity: 0 });
+        await next({ opacity: 1 });
+      }
+    },
+    config: { duration: 2000 }
+  });
+
+  return { topSkillsProps, bottomSkillsProps, logoAnimationProps, toggleButtonProps, visitorsAnimationProps };
 };
 
 export { useAnimationProps };
