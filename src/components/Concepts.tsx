@@ -37,7 +37,7 @@ const Concepts: React.FC = () => {
         </div>
       ) : (
         <Box>
-        <Grid container spacing={3} sx={{padding: 10}}>
+        <Grid container spacing={3} sx={{padding : '80px 80px 0 80px'}}>
           {concepts.map((concept) => (
             <Grid item xs={12} sm={6} md={4} key={concept.title}>
               <Card onClick={() => handleCardClick(concept.component)}>
@@ -48,7 +48,7 @@ const Concepts: React.FC = () => {
             </Grid>
           ))}
         </Grid>
-        <Grid container spacing={3} sx={{padding:10}}>
+        <Grid container spacing={3} sx={{padding : '80px 80px 0 80px'}}>
           {Hooks.map((hook) => (
             <Grid item key={hook.title}>
               <Card onClick={() => handleCardClick(hook.component)}>
@@ -61,7 +61,7 @@ const Concepts: React.FC = () => {
         </Grid>
         </Box>
       )}
-      <Box sx={{pt: 4, pl: 10, display: 'flex'}}>
+      <Box sx={{pt: 1, pl: 10, display: 'flex'}}>
       <Button variant="contained" color="primary" onClick={handleBackClick}>
             Back
        </Button>

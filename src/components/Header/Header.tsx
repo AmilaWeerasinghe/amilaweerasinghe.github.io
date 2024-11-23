@@ -18,7 +18,7 @@ const Header: React.FC = () => {
       <nav className={`navbar ${isOpen ? 'open' : ''}`}>
         <Link to="/" className={`nav-link ${theme}`} onClick={toggleMenu}>Home</Link>
         <Link to="/skills" className={`nav-link ${theme}`} onClick={toggleMenu}>Skills</Link>
-        <Link to="/concepts" className={`nav-link ${theme}`} onClick={toggleMenu}>Portfolio</Link>
+        <Link to="/concepts" className={`nav-link ${theme}`} onClick={toggleMenu}>Concepts</Link>
       </nav>
       <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <span className="bar"></span>
