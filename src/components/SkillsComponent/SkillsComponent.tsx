@@ -9,6 +9,7 @@ import ReduxLogo from '../../assets/logos/redux.svg';
 import AwsLogo from '../../assets/logos/aws.svg';
 import './SkillsComponent.css';
 import { useAnimationProps } from '../utils/animationUtils';
+import VoteComponent from '../VoteComponent/VoteComponent';
 
 const topSkills = [
   { name: 'ReactJS', logo: ReactLogo },
@@ -52,6 +53,7 @@ const SkillsComponent: React.FC = () => {
       </animated.div>
     ))}
   </Box>
+  <VoteComponent />
   </Box>
   );
 };
