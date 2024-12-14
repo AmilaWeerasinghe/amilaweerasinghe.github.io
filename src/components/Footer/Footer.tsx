@@ -8,7 +8,7 @@ export const Footer = () => {
         <Box
           component="footer"
            sx={{
-            position: 'fixed',
+            position: 'relative',
             bottom: 0,
             width: '100%',
             backgroundColor: '#1f242d',

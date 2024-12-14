@@ -30,7 +30,7 @@ const Concepts: React.FC = () => {
   };
 
   return (
-    <Box sx={{alignItems: 'center' , alignContent: 'center'}}>
+    <Box sx={{alignItems: 'center' , alignContent: 'center' , margin: '5%'}}>
       {selectedConcept ? (
         <div>
           {React.createElement(selectedConcept)}
