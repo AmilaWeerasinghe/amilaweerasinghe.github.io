@@ -7,12 +7,10 @@ const useAxiosGet = <T,> (url:string): UseAxiosGetResult<T> => {
     const [data, setData] = useState<T | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
     
-    useEffect(() => {
-        console.log('useAxiosGet', url);    
+    useEffect(() => {  
         const FetchData = async () => {
             try {
                 const response = await axios.get(url);
-                console.log('response', response);
                 setData(response.data);
                 setLoading(false);
 
