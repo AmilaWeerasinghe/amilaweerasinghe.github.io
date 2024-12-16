@@ -1,14 +1,23 @@
 import useAxiosGet from "../../hooks/useAxios";
-import { Box, CircularProgress, Typography, Grid } from '@mui/material';
+import { Box, CircularProgress, Typography, Grid, Button } from '@mui/material';
 import { VoteResults } from "../../interfaces/voteResultsInterface";
 
 
 const VoteComponent = () => {
     const { data, loading } = useAxiosGet<VoteResults[]>('https://rendernodeserver.onrender.com/api/skills');
+
+    // function to handle vote
+    const handleVote = async () => {
+        // open the auth page (browser redirect in a full page for new url)
+        window.location.href = 'http://localhost:8000/api/auth/google';
+    }
     return (
         <Box>
-        <Typography variant="h5">Votes for technologies by users</Typography>
-        <Typography variant="subtitle2">powered by nodejs and mongodb via REST api designed!</Typography>
+        <Box display={'flex'}>
+        <Typography variant="h5">Votes for technologies by visitors</Typography>
+        <Button variant="contained" color="primary" sx={{ ml: 1}} onClick={handleVote}>Vote</Button>
+        </Box>
+        <Typography variant="subtitle2">powered by nodejs, mongodb via REST api and OAuth</Typography>
         <Box>
             {loading ? 
             <CircularProgress color="success"/>
