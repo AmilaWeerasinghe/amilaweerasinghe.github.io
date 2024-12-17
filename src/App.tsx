@@ -9,9 +9,15 @@ import './styles.css';
 import { useSelector } from 'react-redux';
 import { RootState } from './store/store';
 import { Footer } from './components/Footer/Footer';
+import VotingList from './components/VotingList/VotingList';
+import AuthUserComponent from './components/AuthUserComponent/AuthUserComponent';
+import AuthCallBackComponent from './components/AuthCallBack/AuthCallBackComponent';
 
 const App: React.FC = () => {
   const theme = useSelector((state: RootState) => state.theme.theme);
+
+  //protect vote component
+  const ProtectedVotingListComponent = AuthUserComponent(VotingList);
 
   useEffect(() => { 
     document.body.className = theme;
@@ -24,6 +30,8 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/skills" element={<SkillsComponent />} />
         <Route path="/concepts" element={<Concepts />} />
+        <Route path="/authenticate" element={<AuthCallBackComponent />} />
+        <Route path="/vote" element={<ProtectedVotingListComponent />} />
       </Routes>
       <Footer />
     </Router>
