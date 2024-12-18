@@ -15,7 +15,7 @@ const VoteComponent = () => {
         <Box>
         <Box display={'flex'}>
         <Typography variant="h5">Votes for technologies by visitors</Typography>
-        <Button variant="contained" color="primary" sx={{ ml: 1}} onClick={handleVote}>Vote</Button>
+        <Button variant="contained" color="primary" sx={{ ml: 1}} onClick={handleVote}>Start Voting</Button>
         </Box>
         <Typography variant="subtitle2">powered by nodejs, mongodb via REST api and OAuth</Typography>
         <Box>
@@ -24,7 +24,7 @@ const VoteComponent = () => {
             : <Grid container spacing={2}>
                 {data && data.map((vote) => {
                     return (
-                        <Grid item xs={12} sm={6} md={4} key={vote.id}>
+                        <Grid item xs={12} sm={6} md={4} key={vote.name}>
                         <Typography>
                             {vote.name} - {vote.votes}
                         </Typography>
