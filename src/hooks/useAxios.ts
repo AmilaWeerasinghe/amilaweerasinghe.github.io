@@ -6,6 +6,7 @@ import { UseAxiosGetResult } from '../interfaces/useAxiosGetInterface';
 const useAxiosGet = <T,> (url:string): UseAxiosGetResult<T> => {
     const [data, setData] = useState<T | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<string | null>(null);
     
     useEffect(() => {  
         const FetchData = async () => {
@@ -15,13 +16,13 @@ const useAxiosGet = <T,> (url:string): UseAxiosGetResult<T> => {
                 setLoading(false);
 
             } catch ( error ) {
-                console.log('Error fetching data', error);
+                setError(error as string);
             }
         }
         FetchData();
     }, [url]);
     
-    return { data, loading };
+    return { data, loading, error };
     }
 
 export default useAxiosGet;

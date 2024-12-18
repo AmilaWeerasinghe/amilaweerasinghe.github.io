@@ -9,9 +9,10 @@ const AuthCallBackComponent = () => {
 
     useEffect(() => {
         const token = queryParams.get('token');
-        if(token){
+        const userId = queryParams.get('userId');
+        if(token && userId) {
             localStorage.setItem('token', token);
-            navigate('/vote');
+            navigate(`/vote?googleId=${userId}`);
         }
     }, [queryParams,navigate])
 
