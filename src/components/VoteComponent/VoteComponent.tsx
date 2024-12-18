@@ -5,7 +5,7 @@ import { API_BASE_URL } from "../../constants/api.consts";
 
 
 const VoteComponent = () => {
-    const { data, loading, error } = useAxiosGet<VoteResults[]>(`${API_BASE_URL}}/api/skills`);
+    const { data, loading, error } = useAxiosGet<VoteResults[]>(`${API_BASE_URL}/api/skills`);
 
     // function to handle vote
     const handleVote = async () => {
