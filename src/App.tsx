@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Home from './components/HomePage/Home';
 import SkillsComponent from './components/SkillsComponent/SkillsComponent';
@@ -16,7 +16,7 @@ import AuthCallBackComponent from './components/AuthCallBack/AuthCallBackCompone
 const App: React.FC = () => {
   const theme = useSelector((state: RootState) => state.theme.theme);
 
-  //protect vote component
+  // Protect vote component using HOCs
   const ProtectedVotingListComponent = AuthUserComponent(VotingList);
 
   useEffect(() => { 
