@@ -4,7 +4,7 @@ import { VoteResults } from "../../interfaces/voteResultsInterface";
 
 
 const VoteComponent = () => {
-    const { data, loading, error } = useAxiosGet<VoteResults[]>(`${process.env.API_BASE_URL}/api/skills`);
+    const { data, loading, error } = useAxiosGet<VoteResults[]>(`${process.env.REACT_APP_API_BASE_URL}/api/skills`);
 
     // function to handle vote
     const handleVote = async () => {
