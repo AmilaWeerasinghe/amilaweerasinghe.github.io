@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { voteForSkillsInterface } from '../../interfaces/voteForSkillsInterface';
 import axios from 'axios';
+import { API_BASE_URL } from '../../constants/api.consts';
 
 const skills = [...topSkills, ...bottomSkills];
 
@@ -30,7 +31,7 @@ const VotingList = () => {
             if(payload) {
                 try {
                     setLoading(true);
-                    const response = await axios.post('http://localhost:8000/api/skills/vote', payload);
+                    const response = await axios.post(`${API_BASE_URL}/api/skills/vote`, payload);
                     if(response.status === 200) {
                         setError(null);
                     }

@@ -1,15 +1,16 @@
 import useAxiosGet  from "../../hooks/useAxios";
 import { Box, CircularProgress, Typography, Grid, Button, Alert } from '@mui/material';
 import { VoteResults } from "../../interfaces/voteResultsInterface";
+import { API_BASE_URL } from "../../constants/api.consts";
 
 
 const VoteComponent = () => {
-    const { data, loading, error } = useAxiosGet<VoteResults[]>(`${process.env.REACT_APP_API_BASE_URL}/api/skills`);
+    const { data, loading, error } = useAxiosGet<VoteResults[]>(`${API_BASE_URL}}/api/skills`);
 
     // function to handle vote
     const handleVote = async () => {
         // open the auth page (browser redirect in a full page for new url)
-        window.location.href = `http://localhost:8000/api/auth/google`;
+        window.location.href = `${API_BASE_URL}/api/auth/google`;
     }
     return (
         <Box>
