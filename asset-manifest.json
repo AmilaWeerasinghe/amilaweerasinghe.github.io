@@ -1,24 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.3dfcdfec.css",
-    "main.js": "/static/js/main.07a0179d.js",
+    "main.css": "/static/css/main.20d3399f.css",
+    "main.js": "/static/js/main.42d82b49.js",
     "static/media/boxicons.svg": "/static/media/boxicons.9e2b21b135bc7d4c803f.svg",
     "static/media/boxicons.eot": "/static/media/boxicons.65a8ce52fc5427e8f94d.eot",
     "static/media/boxicons.woff": "/static/media/boxicons.d12afc36557395143e4b.woff",
     "static/media/boxicons.ttf": "/static/media/boxicons.db9ddb1898dbd76badca.ttf",
     "static/media/boxicons.woff2": "/static/media/boxicons.df635aaf04cd75132f62.woff2",
-    "static/media/react.svg": "/static/media/react.88ca6c76dbf8ddd64ab5440e2149ea30.svg",
-    "static/media/aws.svg": "/static/media/aws.86285b638c5d25743d68233b85c9e527.svg",
-    "static/media/redux.svg": "/static/media/redux.a907b9f98d324503c0c0d9ac2991eb03.svg",
-    "static/media/typescript.svg": "/static/media/typescript.571784b1a700777a621fe3adfb726624.svg",
-    "static/media/nodejs.svg": "/static/media/nodejs.417a78db5838fe7e936261d2acc93404.svg",
-    "static/media/mongodb.svg": "/static/media/mongodb.1c774f11eae1c666f1355e78a8741b36.svg",
     "index.html": "/index.html",
-    "main.3dfcdfec.css.map": "/static/css/main.3dfcdfec.css.map",
-    "main.07a0179d.js.map": "/static/js/main.07a0179d.js.map"
+    "main.20d3399f.css.map": "/static/css/main.20d3399f.css.map",
+    "main.42d82b49.js.map": "/static/js/main.42d82b49.js.map"
   },
   "entrypoints": [
-    "static/css/main.3dfcdfec.css",
-    "static/js/main.07a0179d.js"
+    "static/css/main.20d3399f.css",
+    "static/js/main.42d82b49.js"
   ]
 }
