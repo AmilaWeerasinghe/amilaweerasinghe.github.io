@@ -10,7 +10,8 @@ const Home: React.FC = () => {
         <h3>Hello, It's Me</h3>
         <h1>Amila Weerasinghe</h1>
         <h3>And I'm a <TypedText /></h3>
-        <p>With a proven history of building amazing products</p>
+        <p> Experienced in building scalable products, leading engineering teams,
+  and collaborating with cross-functional teams across the U.S. and Australia.</p>
         <div className="social-media">
           <a href="https://www.linkedin.com/in/amila677/" style={{ '--i': 6 } as React.CSSProperties} target="_blank" rel="noopener noreferrer">
             <i className='bx bxl-linkedin'></i>
