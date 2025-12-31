@@ -7,6 +7,7 @@ const TypedText: React.FC = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: ['Senior Software Engineer',
+        'Team lead engineer',
         'Full stack Developer',
         'Front End Engineer',
         'Back End Engineer'], 
